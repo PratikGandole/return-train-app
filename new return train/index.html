@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+  <title>Return Train</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row" style="
+    justify-content: space-between;
+    margin-right: 26px;
+">
+      <img src="assest/train-svgrepo-com.svg" width="80px" style="margin-left: 42px;">
+      <img src="assest/email-message-svgrepo-com.svg" width="50px" style="
+       margin-top: 19px;" id="info-message" onclick="openPopup2()" aria-hidden="true">
+       </div>
+    </div>
+  </header>
+
+
+  <section class="container">
+    <div class="rectangle">
+
+      <span class="circle"> </span>
+      <hr class="line">
+      <select id="search" class="inner-rectangle" required=""><i class="fa fa-exchange" aria-hidden="true"></i>
+        <option>From station</option>
+        <option value="Nalasopara">Nalasopara</option>
+      </select>
+
+      <span class="circle2"> </span>
+      <select id="search1" class="inner-rectangle" required="">
+        <option> To station</option>
+        <option value="Borivali">Borivali</option>
+        <option value="Andheri">Andheri</option>
+        <option value="Bandra">Bandra</option>
+        <option value="Dadar">Dadar</option>
+        <option value="Churchgate">Churchgate</option>
+      </select>
+
+      <button type="button" class="btn btn-primary">Find Train</button>
+    </div>
+  </section>
+
+
+
+  <div class="popup-container" id="popup2" style="display: none;">
+    <div class="popup-content">
+      <span class="close-button" onclick="closePopup2()">&times;</span>
+      <form action="sugback.php" method="POST">
+        <div class="form-group">
+
+          <input type="text" class="form-control font" name="name" placeholder="Name*" id="name" required=""
+            style="font-family:'Press Start 2P', cursive !important ;">
+        </div>
+        <div class="form-group">
+
+          <input type="email" class="form-control font" name="email" placeholder="Email*" id="email" required=""
+            style="font-family:'Press Start 2P', cursive !important ;">
+        </div>
+        <div class="form-group">
+
+        </div>
+
+        <div class="form-group">
+          <h2 class="Suggestion">Suggestion</h2>
+
+          <textarea class="form-control font" placeholder="Message*" name="message" id="message" rows="4" required=""
+            style="width: 230px; height: 176px;"></textarea>
+        </div>
+        <button type="submit" name="submit" class="btn btn-primary" style="
+               border-radius: 10px;
+               background-color: white;
+               color: #5f5f5f;
+               font-size: 115%;
+               border-color: #d4d4d4;
+               font-family: 'Press Start 2P';
+               padding: 3%;
+               ">Submit</button>
+      </form>
+
+
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
